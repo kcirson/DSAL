@@ -13,19 +13,19 @@ public class ExpressionValidator<E> implements ExpressionValidatorInterface {
 	@SuppressWarnings("unchecked")
 	@Override
 	public boolean CorrectExpression(String s) {
-		HashMap<String, String> tekens = new HashMap<String, String>();
-		tekens.put(">", "<");
-		tekens.put("]", "[");
-		tekens.put(")", "(");
-		tekens.put("}", "{");
+		HashMap<String, String> tokens = new HashMap<String, String>();
+		tokens.put(">", "<");
+		tokens.put("]", "[");
+		tokens.put(")", "(");
+		tokens.put("}", "{");
 		
 		for(int i = 0; i < s.length(); i++) {
 			String currentChar = String.valueOf(s.charAt(i));
 
-			if(tekens.containsValue(currentChar))	//Openkarakter
+			if(tokens.containsValue(currentChar))
 				stack.push((E) currentChar);
-			else if(tekens.containsKey(currentChar))	//Sluitkarakter
-				if(stack.peek().equals(tekens.get(currentChar)))
+			else if(tokens.containsKey(currentChar))
+				if(stack.peek().equals(tokens.get(currentChar)))
 					stack.pop();
 				else
 					return false;

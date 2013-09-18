@@ -43,9 +43,9 @@ public class MyStack<E> implements MyStackInterface<E> {
 
 	public String toString() {
 		if(isEmpty())
-			return "toString: de stack is leeg!";
+			return "toString: the stack is empty!";
 
-		String s = "toString: de stack heeft " + stack .size() + " objecten. Dat zijn: \n";
+		String s = "toString: the stack has " + stack .size() + " objects. Which are: \n";
 		for(E item : stack )
 			s += item.toString() + "\n";
 

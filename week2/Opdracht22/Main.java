@@ -6,14 +6,14 @@ public class Main {
 	static ExpressionValidator<Character> expression = new ExpressionValidator<>(stack);
 	
 	public static void main(String[] args){
-		//tests: goed, goed, goed, fout, fout
+		//correct, correct, correct, incorrect, incorrect
 		String[] tests = new String[]{"((<>))", "((<>)())", "[(<>)]()(()())", "([)]]", "(((<)>))"};
 
 		for(String s : tests) {
 			if(expression.CorrectExpression(s)){
-				System.out.println(s + " is goed!");
+				System.out.println(s + " is correct!");
 			}else{
-				System.out.println(s + " is fout!");
+				System.out.println(s + " is incorrect!");
 			}
 		}
 	}
