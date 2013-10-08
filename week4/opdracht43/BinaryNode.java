@@ -95,22 +95,29 @@ public class BinaryNode<E> {
 	}
 
 	String toLevelOrderString() {
-		Queue<String> q = new LinkedList<String>();
+		/*Queue<String> q = new LinkedList<String>();
 		q.add(element.toString());
+
 		if (left != null) {
 			q.add(left.element.toString());
 			left.toLevelOrderString();
-		} else {
-			q.add(left.element.toString());
 		}
 		if (right != null) {
 			q.add(right.element.toString());
-			right.toLevelOrderString();
-		} else {
-			q.add(right.element.toString());
 		}
 
-		return q.toString();
+		return q.toString();*/
+		
+		String s = "";
+		
+		if(left != null && right != null) {
+			s += left.toLevelOrderString();
+			s += right.toLevelOrderString();
+		} else {
+			s += element.toString() + " ";
+		}
+		
+		//return s;
+		
 	}
-
 }

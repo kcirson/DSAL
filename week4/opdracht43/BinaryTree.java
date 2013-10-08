@@ -59,31 +59,32 @@ public class BinaryTree<E> {
 
 	public static void main(String[] s) {
 		BinaryTree<Integer> b = new BinaryTree<Integer>(new Integer[]{1, 2, 3});
-		//System.out.println(b);
-		System.out.println("----------------");
+		// System.out.println(b);
+		// System.out.println("----------------");
 		b = new BinaryTree<Integer>(new Integer[]{1, 2, 3, 4});
-		//System.out.println(b);
-		System.out.println("----------------");
+		// System.out.println(b);
+		// System.out.println("----------------");
 		b = new BinaryTree<Integer>(new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
-		//System.out.println(b);
-		System.out.println("----------------");
+		// System.out.println(b);
+		// System.out.println("----------------");
 		b = new BinaryTree<Integer>(new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15});
-		//System.out.println(b);
+		// System.out.println(b);
 		// System.out.println("size: " + b.size());
 		// System.out.println("height: " + b.height());
-		System.out.println("----------------");
+		// System.out.println("----------------");
 		b = new BinaryTree<Integer>(null);
-		//System.out.println(b);
+		// System.out.println(b);
 		b = new BinaryTree<Integer>(new Integer[0]);
-		//System.out.println(b);
+		// System.out.println(b);
 		b = new BinaryTree<Integer>(new Integer[]{21, 11, 22, 1, 23, 12, 24});
 		System.out.println("size: " + b.size());
 		System.out.println("height: " + b.height());
-		//System.out.println(b);
-		//System.out.println(b.toPreOrderString());
-		//System.out.println(b.toInOrderString());
+		// System.out.println(b);
+		// System.out.println(b.toPreOrderString());
+		// System.out.println(b.toInOrderString());
 		System.out.println(b.toPostOrderString());
+		System.out.println("Level Order String:");
 		System.out.println(b.toLevelOrderString());
-		System.out.println("----------------");
+		// System.out.println("----------------");
 	}
 }
